@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Simple input" icon-name="standard:account">
+        <lightning-layout multiple-rows>
+            <!-- Fistname -->
+            <lightning-layout-item size="12">
+                <lightning-input type="text" label="Enter your first name" onchange={firstNameHandler}></lightning-input>
+            </lightning-layout-item>
+
+            <!-- Lastname -->
+            <lightning-layout-item size="12">
+                <lightning-input type="text" label="Enter your last name" onchange={lastNameHandler}></lightning-input>
+            </lightning-layout-item>
+
+            <!-- Button -->
+            <lightning-layout-item size="12">
+                <lightning-button label="Submit" onclick={submissionHandler}></lightning-button>
+            </lightning-layout-item>
+
+            <!-- Output -->
+            <lightning-layout-item size="12">
+                <template for:each={nameList} for:item="name">
+                    <p key={name}>{name}</p>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+    
+</template>
