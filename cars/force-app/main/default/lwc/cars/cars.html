@@ -3,9 +3,15 @@
         <ul>
             <template for:each={carsInfo} for:item="car">
                 <li key={car}>
-                    <c-car car-info={car}></c-car>
+                    <c-car car-info={car} ontileclick={onTileSelectHandler}></c-car>
                 </li>
             </template>
         </ul>
+    </lightning-card>
+
+    <lightning-card>
+        <p>
+            You have selected: {selectedCar}
+        </p>
     </lightning-card>
 </template>
